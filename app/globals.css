@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&family=Montserrat&family=Oi&family=Roboto+Mono&family=Satisfy&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,3 +27,17 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.hover1\:glow:hover {
+  filter: drop-shadow(0 0 10px #f09433) drop-shadow(0 0 20px #e6683c) drop-shadow(0 0 30px #dc2743) drop-shadow(0 0 40px #cc2366) drop-shadow(0 0 50px #bc1888);
+}
+.input-field {
+  width: 100%; /* Set your desired width */
+  height: 2.5rem; /* Set your desired height */
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc; /* Add a border for better visibility */
+  color: #000; /* Set the text color to black or a color that contrasts well with your background */
+}
+
+
