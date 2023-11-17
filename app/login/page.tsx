@@ -98,7 +98,7 @@ export default function LoginPage() {
             onClick={onLogin}
             className="h-10 w-24 bg-[#B185DB] hover:bg-black rounded-3xl"
           >
-            Sign Up
+            Login
           </button>
         </form>
       </div>

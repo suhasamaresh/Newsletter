@@ -7,9 +7,9 @@ import Nav from '@/components/Nav';
 import RootLayout from './layout';
 export default function Home() {
   return (
-    
+    <section id='home'>
     <div>
-    <section className="bg-black justify-center items-center">
+    <section className="bg-black justify-center items-center" >
       <div className="text-center md:pt-[118px] pt-[50px]">
         <img
           src="news1.webp"
@@ -32,5 +32,6 @@ export default function Home() {
     <Button/>
     <Footer/>
     </div>
+    </section>
   );
 }
