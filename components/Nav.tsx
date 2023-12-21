@@ -1,15 +1,12 @@
 // Navbar.tsx
-"use client"
+"use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { CgProfile } from 'react-icons/cg';
+import { useSession, signOut } from 'next-auth/react';
 
-interface NavbarProps {
-  isAuthenticated: true; // Assume you have a way to determine authentication status
-}
-
-const Navbar: React.FC<NavbarProps> = ({ isAuthenticated }) => {
+const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { data: session } = useSession();
 
   return (
     <nav className="bg-black p-4">
@@ -59,11 +56,12 @@ const Navbar: React.FC<NavbarProps> = ({ isAuthenticated }) => {
               Contribute
             </span>
           </Link>
-          {isAuthenticated ? (
-            <Link href="/profile" passHref>
-              <span className='text-white px-5 cursor-pointer'>
-                {/* Use CgProfile icon for the profile logo */}
-                <CgProfile className="h-6 w-6" />
+
+          {/* Conditionally render Login or Profile based on session */}
+          {session ? (
+            <Link href="/dashboard" passHref>
+              <span className="text-white px-5 cursor-pointer">
+                Profile
               </span>
             </Link>
           ) : (
@@ -94,11 +92,12 @@ const Navbar: React.FC<NavbarProps> = ({ isAuthenticated }) => {
               Write
             </span>
           </Link>
-          {isAuthenticated ? (
-            <Link href="/profile" passHref>
+
+          {/* Conditionally render Login or Profile based on session */}
+          {session ? (
+            <Link href="/dashboard" passHref>
               <span className='block text-white cursor-pointer'>
-                {/* Use CgProfile icon for the profile logo */}
-                <CgProfile className="h-6 w-6" />
+                Profile
               </span>
             </Link>
           ) : (

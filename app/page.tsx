@@ -5,6 +5,7 @@ import Button from '@/app/pages/Button';
 import Footer from './pages/Footer';
 import Nav from '@/components/Nav';
 import RootLayout from './layout';
+
 export default function Home() {
   return (
     <section id='home'>
