@@ -25,14 +25,14 @@ const Newsletter: React.FC = () => {
   };
 
   return (
+    <section id="button">
     <div className="bg-[#D2B7E5] pb-20">
       <p className="font-oi text-4xl justify-center flex items-center text-center">
         Join the Newsletter
         <br /> Today!!
       </p>
-      <p className="text-center pt-10">
-        Stop settling for mundane newsletters. Discover a
-        <br /> personalized experience and transform your inbox today!
+      <p className="text-center pt-10  font-thin">
+        **Make five minutes of your day more productive then ever!**
       </p>
       <div className="container flex justify-center items-center pt-10">
         <div className="relative">
@@ -71,6 +71,7 @@ const Newsletter: React.FC = () => {
         </p>
       )}
     </div>
+    </section>
   );
 };
 

@@ -1,8 +1,9 @@
 // Navbar.tsx
-"use client";
+"use client"
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useSession, signOut } from 'next-auth/react';
+import { FaPencilAlt } from 'react-icons/fa';
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,33 +43,33 @@ const Navbar: React.FC = () => {
         {/* Navbar Links with Link */}
         <div className="hidden lg:flex space-x-4 mx-6">
           <Link href="/" passHref>
-            <span className="text-white px-5 cursor-pointer">
-              Home
-            </span>
+            <span className="text-white px-5 cursor-pointer">Home</span>
           </Link>
           <Link href="/explore" passHref>
-            <span className="text-white px-5 cursor-pointer">
-              Explore
-            </span>
+            <span className="text-white px-5 cursor-pointer">Explore</span>
           </Link>
           <Link href="/contribute" passHref>
-            <span className="text-white px-5 cursor-pointer">
-              Contribute
-            </span>
+            <span className="text-white px-5 cursor-pointer">Contribute</span>
           </Link>
+
+          {/* Conditionally render Write button based on session */}
+          {session && (
+            <Link href="/write" passHref>
+              <span className="text-white px-5 cursor-pointer rounded-full bg-black flex items-center">
+                <FaPencilAlt className="mr-2" />
+                Write
+              </span>
+            </Link>
+          )}
 
           {/* Conditionally render Login or Profile based on session */}
           {session ? (
             <Link href="/dashboard" passHref>
-              <span className="text-white px-5 cursor-pointer">
-                Profile
-              </span>
+              <span className="text-white px-5 cursor-pointer">Profile</span>
             </Link>
           ) : (
             <Link href="/login" passHref>
-              <span className="text-white px-5 cursor-pointer">
-                Login
-              </span>
+              <span className="text-white px-5 cursor-pointer">Login</span>
             </Link>
           )}
         </div>
@@ -78,33 +79,23 @@ const Navbar: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-gray-800 p-4">
           <Link href="/" passHref>
-            <span className="block text-white mb-2 cursor-pointer">
-              Home
-            </span>
+            <span className="block text-white mb-2 cursor-pointer">Home</span>
           </Link>
           <Link href="/explore" passHref>
-            <span className="block text-white mb-2 cursor-pointer">
-              Explore
-            </span>
+            <span className="block text-white mb-2 cursor-pointer">Explore</span>
           </Link>
           <Link href="/write" passHref>
-            <span className="block text-white mb-2 cursor-pointer">
-              Write
-            </span>
+            <span className="block text-white mb-2 cursor-pointer">Write</span>
           </Link>
 
           {/* Conditionally render Login or Profile based on session */}
           {session ? (
             <Link href="/dashboard" passHref>
-              <span className='block text-white cursor-pointer'>
-                Profile
-              </span>
+              <span className='block text-white cursor-pointer'>Profile</span>
             </Link>
           ) : (
             <Link href="/login" passHref>
-              <span className="block text-white mb-2 cursor-pointer">
-                Login
-              </span>
+              <span className="block text-white mb-2 cursor-pointer">Login</span>
             </Link>
           )}
         </div>
@@ -114,3 +105,4 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+

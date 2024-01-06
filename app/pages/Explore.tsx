@@ -28,9 +28,6 @@ const CardWithDescription = () => {
       <div className="flex justify-center items-center mt-8">
         <img src="news3.webp" alt="logo" className="h-48 w-48 md:h-[300px] md:w-[300px]" />
       </div>
-      <div>
-        <p className=" text-left">Whenever you don't feel motivated , try to talk yourself into doing it for just 5 minutes</p>
-      </div>
     </div>
   );
 };

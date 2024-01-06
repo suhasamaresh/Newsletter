@@ -2,9 +2,10 @@ import motion from 'framer-motion';
 import Categories from './pages/Categories';
 import Explore from './pages/Explore'
 import Button from '@/app/pages/Button';
-import Footer from './pages/Footer';
+import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
 import RootLayout from './layout';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -24,8 +25,8 @@ export default function Home() {
         </h1>
       </div>
       <div className="flex justify-center md:space-x-10 space-x-7 pt-10 pb-14">
-        <button className="bg-[#B185DB] py-3 px-6 rounded-3xl text-black font-bold text-xl">Explore</button>
-        <button className="bg-white py-3 rounded-3xl px-6 font-bold text-xl ">Subscribe</button>
+        <Link className="bg-[#B185DB] py-3 px-6 rounded-3xl text-black font-bold text-xl" href={'/explore'}>Explore</Link>
+        <Link className="bg-white py-3 rounded-3xl px-6 font-bold text-xl " href={'#button'}>Subscribe</Link>
       </div>
     </section>
     <Categories/>

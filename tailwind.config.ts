@@ -18,6 +18,12 @@ const config: Config = {
         oi: ["Oi", "serif"],
         poppins: ["Poppins"],
       },
+      flex: {
+        '2': '2 2 0%',
+        '5': '5 5 0%',
+        '4': '4 4 0%',
+        '3': '3 3 0%'
+      },
     },
   },
   plugins: [],
