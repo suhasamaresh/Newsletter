@@ -3,7 +3,7 @@ import React from "react";
 
 const Mc = () => {
   return (
-    <div>
+    <div className="border-gray-600 rounded-xl">
       <h2 className="text-gray-600  mt-10">Discover by categories</h2>
       <h1 className="font-bold text-3xl mt-2 mb-2">Categories</h1>
       <div>

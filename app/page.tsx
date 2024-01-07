@@ -32,7 +32,6 @@ export default function Home() {
     <Categories/>
     <Explore/>
     <Button/>
-    <Footer/>
     </div>
     </section>
   );

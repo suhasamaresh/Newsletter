@@ -4,7 +4,7 @@ import React from "react";
 const Mwii = () => {
   return (
     <div>
-      <h2 className="text-gray-600 text-lg">What's hot</h2>
+      <h2 className="text-gray-600 ">What's hot</h2>
       <h1 className="font-bold text-3xl">Most Popular</h1>
       <div className="">
         <Link href={"/"} className="flex items-center gap-6">
@@ -26,7 +26,7 @@ const Mwii = () => {
             <span className="border-white rounded-full w-[70px] bg-[#fffc67]">
               <span className="pl-2">Culture</span>
             </span>
-            <h3 className="font-lg text-lg">
+            <h3 className="font-lg ">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             </h3>
             <div className="font-sm">
@@ -40,7 +40,7 @@ const Mwii = () => {
             <span className="border-white rounded-full w-[70px] bg-[#a967ff]">
               <span className="pl-2">Coding</span>
             </span>
-            <h3 className="font-lg text-lg">
+            <h3 className="font-lg ">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             </h3>
             <div className="font-sm">
@@ -54,7 +54,7 @@ const Mwii = () => {
             <span className="border-white rounded-full w-[70px] bg-[#67ff7e]">
               <span className="pl-2">Fashion</span>
             </span>
-            <h3 className="font-lg text-lg">
+            <h3 className="font-lg ">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             </h3>
             <div className="font-sm">

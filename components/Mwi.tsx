@@ -23,7 +23,7 @@ const Mwi = () => {
             <span className="border-white rounded-full w-[60px] bg-[#ff8867]">
               <span className="pl-2">Travel</span>
             </span>
-            <h3 className="font-lg text-lg">
+            <h3 className="font-lg ">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             </h3>
             <div className="font-sm">
@@ -46,7 +46,7 @@ const Mwi = () => {
             <span className="border-white rounded-full w-[70px] bg-[#fffc67]">
               <span className="pl-2">Culture</span>
             </span>
-            <h3 className="font-lg text-lg">
+            <h3 className="font-lg ">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             </h3>
             <div className="font-sm">
@@ -69,7 +69,7 @@ const Mwi = () => {
             <span className="border-white rounded-full w-[70px] bg-[#a967ff]">
               <span className="pl-2">Coding</span>
             </span>
-            <h3 className="font-lg text-lg">
+            <h3 className=" ">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             </h3>
             <div className="font-sm">

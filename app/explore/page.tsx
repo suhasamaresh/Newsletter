@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Categories from "@/components/Category";
-import Hi from "@/components/Hi";
 import CardList from "@/components/CardList";
 import Pagination from "@/components/Pagination";
 import Menu from "@/components/Menu";
@@ -36,11 +35,10 @@ const featured = () => {
         </div>
       </div>
       <Categories />
-      <div className="lg:flex gap-[30px]">
+      <div className="lg:flex ">
         <CardList />
         <Menu />
       </div>
-      <Footer />
     </div>
   );
 };

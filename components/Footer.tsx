@@ -7,11 +7,11 @@ import { FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 const Footer: React.FC = () => {
   return (
-    <div className="container mt-12 px-4 py-8 flex items-center justify-between text-softTextColor md:ml-16 md:mr-24">
-      <div className="flex-1 flex flex-col gap-4 ml-20">
-        <div className="flex items-center gap-4 rounded">
+    <div className=" mt-12 lg:flex items-center justify-between text-softTextColor md:ml-20 md:mr-24 mb-10">
+      <div className="flex-1 flex flex-col gap-4 ml-20 w-full justify-between">
+        <div className="flex items-center gap-4 rounded ">
           <Image src="/wah.jpg" alt="lama blog" width={50} height={50} />
-          <h1 className="text-2xl font-bold">Lamablog</h1>
+          <h1 className="text-2xl font-bold">SuhasBlog</h1>
         </div>
         <p className="font-light">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
           <FaYoutube />
         </div>
       </div>
-      <div className="flex-1 flex justify-end gap-14 mr-20">
+      <div className="flex-1 flex gap-14 justify-between w-full">
         <div className="flex flex-col gap-4">
           <span className="font-bold">Links</span>
           <Link href="/">Homepage</Link>

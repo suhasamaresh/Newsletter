@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Card = () => {
   return (
-    <div className="mb-8 lg:flex gap-4 lg:items-center pr-10 md:pr-20">
+    <div className="mb-8 lg:flex gap-8 lg:items-center pr-10 md:pr-20">
       {/* Image Section */}
       <div className="lg:flex-[2_2_0%] lg:w-1/2">
         <Image

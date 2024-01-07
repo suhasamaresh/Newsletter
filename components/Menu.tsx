@@ -7,7 +7,7 @@ import Mc from "./Mc";
 
 const Menu = () => {
   return (
-    <div className="pl-10 md:pl-40 xl:flex-[3_3_0%] xl:pr-20 invisible xl:visible">
+    <div className=" xl:flex-[2_2_0%] xl:pr-20 hidden xl:block mr-20">
       <Mwii />
       <Mc />
       <Mwi />

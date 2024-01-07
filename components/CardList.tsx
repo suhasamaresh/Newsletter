@@ -5,7 +5,7 @@ import Card from './Card';
 
 const CardList = () => {
   return (
-    <div className='pl-10 md:pl-20 lg:pl-40 xl:flex-[5_5_0%]'>
+    <div className='pl-10 md:pl-10 lg:pl-40 xl:flex-[5_5_0%]'>
         <h1 className='font-bold text-3xl mb-4'>Recent Posts</h1>
         <div>
             <Card />
