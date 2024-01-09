@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
@@ -11,6 +11,12 @@ export default function LoginForm() {
   const [error, setError] = useState("");
 
   const router = useRouter();
+  const{data, status} = useSession();
+  console.log(data,status);
+  
+  if(status === "authenticated"){
+    router.push("/")
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,6 +37,14 @@ export default function LoginForm() {
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const handleGoogleSignIn = async () => {
+    await signIn("google", { redirect: false });
+  };
+
+  const handleGitHubSignIn = async () => {
+    await signIn("github", { redirect: false });
   };
 
   return (
@@ -54,6 +68,30 @@ export default function LoginForm() {
           <button className="bg-purple-600 text-white font-bold cursor-pointer px-8 py-3 rounded-md">
             Login
           </button>
+          <div className="flex justify-center gap-4 mt-4">
+            <button
+              onClick={() => signIn("google")}
+              className="bg-red-600 text-white font-bold cursor-pointer px-6 py-2 rounded-full flex items-center"
+            >
+              <img
+                src="/google.png"  
+                alt="Google Logo"
+                className="w-5 h-5 mr-2"
+              />
+              Google
+            </button>
+            <button
+              onClick={handleGitHubSignIn}
+              className="bg-gray-700 text-black font-bold cursor-pointer px-6 py-2 rounded-full flex items-center"
+            >
+              <img
+                src="/github.png" 
+                alt="GitHub Logo"
+                className="w-5 h-5 mr-2"
+              />
+              GitHub
+            </button>
+          </div>
           {error && (
             <div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-md mt-2">
               {error}

@@ -12,7 +12,10 @@ const page = () => {
   const [value,setValue] = useState("");
   return (
     <div className="pl-40 pt-10 pr-40 items-start">
+      <div className="flex justify-between">
       <input placeholder="Title"  className="p-[20px] text-5xl border-none outline-none bg-transparent"/>
+      <button className="bg-[#1a8417] rounded-xl text-white  right-5  pl-[20px] pr-[20px] mt-7 mb-7 border-none">Publish</button>
+      </div>
       <div className="flex gap-[20px] h-[700px] flex-col">
         <button onClick={() => setOpen(!open)} className="h-[36px] w-[36px] rounded full flex flex-row items-center justify-center ">
           <IoIosAddCircleOutline size={20} />
@@ -33,7 +36,6 @@ const page = () => {
         <ReactQuill theme="snow" value={value} onChange={setValue} placeholder="Tell your story..." className="w-full h-full bg-transparent p-[20px] mb-10"/>
 
       </div>
-      <button className="bg-[#1a8417] rounded-xl text-white top-8 right-5 pt-[10px] pb-[10px] pl-[20px] pr-[20px] border none">Publish</button>
     </div>
   );
 };
